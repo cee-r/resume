@@ -3,7 +3,7 @@
 ### Todo
 * SVG for icons
 * Section tracker
-* Test - tes test test develop
+* Test git plus
 
 ### Used
 
