@@ -1,0 +1,155 @@
+@import 'normalize.css';
+
+// FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+$font-base: 'Lato', sans-serif;
+
+.font-icon {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.font-icon-brand {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+}
+
+.transition {
+  transition: all .3s ease-in-out;
+}
+
+// COLOURS
+
+$color-primary: #1B3440;
+$color-secondary: #3d7e9a; // #4A849F;
+$color-tertiary: #B4D6C6;
+$color-accent: #F2845C;
+
+$color-light: #fff;
+$color-offw: #F5F1D5;
+$color-dark: #1a1a1a;
+
+
+// MISC
+
+.off-screen {
+  position: fixed;
+  top: -1000000px;
+  left: -1000000px;
+}
+
+.container-fluid {
+  padding: 0; }
+
+.container-fluid > .row {
+  margin: 0; }
+
+
+body {
+  font-family: $font-base;
+  font-size: 14px;
+}
+
+main h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-light;
+}
+
+
+
+#profile {
+  padding-top: 1em;
+  background: $color-primary;
+
+  .name {
+    color: #fff;
+
+    h1 {margin: 0;}
+
+    span {
+      color: $color-offw;
+    }
+  }
+
+  .contact {
+    ul {
+      padding-left: 0;
+      list-style: none;
+      text-align: right;
+
+      li {
+        display: inline-block;
+        margin-right: .5em;
+
+        a {
+          display: block;
+          height: 50px;
+          width: 50px;
+          background: $color-offw;
+          border-radius: 50%;
+          text-align: center;
+          padding: .7em;
+          @extend .transition;
+
+          &:hover {
+            background: $color-accent;
+            text-decoration: none;
+          }
+
+          &:before {
+            @extend .font-icon;
+            color: $color-primary;
+            font-size: 1.5em;
+          }
+
+          &.phone:before {
+            content: '\f3cd'
+          }
+
+          &.email:before {
+            content: '\f0e0'
+          }
+
+          &.linkedin:before {
+            @extend .font-icon-brand;
+            content: '\f08c'
+          }
+
+          &.pdf:before {
+            content: '\f1c1'
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#qualifications {
+  background: $color-secondary;
+  padding: 2em 0;
+
+  #hero-slide {
+    padding: 3em 0;
+
+    .carousel-inner {
+      margin: 1em auto;
+    }
+  }
+
+
+  .ql-description {
+    padding: 0 1.5em;
+    text-align: center;
+
+
+    p {
+      margin: 2em 0;
+      text-align: left;
+      color: $color-light;
+      font-size: 1.2em;
+    }
+  }
+}
