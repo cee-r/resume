@@ -1,2 +1,8 @@
-# resume
-Resume
+# Resume
+
+### Todo
+
+### Used
+
+* Bootstrap
+* FontAwesome
