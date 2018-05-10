@@ -128,22 +128,28 @@ main h2 {
 
 
 #qualifications {
+  width: 100%;
   background: $color-secondary;
   padding: 2em 0;
+  height: 450px;
+  box-sizing: border-box;
 
-  #hero-slide {
-    padding: 3em 0;
+  .ql-slider {
+    visibility: hidden;
+    transition: visibility .5s ease-in-out;
 
-    .carousel-inner {
-      margin: 1em auto;
+    &.slick-initialized {
+      visibility: visible;
     }
   }
-
 
   .ql-description {
     padding: 0 1.5em;
     text-align: center;
 
+    img {
+      margin:0 auto;
+    }
 
     p {
       margin: 2em 0;
@@ -152,4 +158,31 @@ main h2 {
       font-size: 1.2em;
     }
   }
+
+  .slick-next, .slick-prev {
+    &:before {
+      @extend .font-icon;
+    }
+  }
+
+  .slick-next {
+    right: -5%;
+  }
+
+  .slick-prev {
+    left: -5%;
+  }
+  .slick-prev:before {
+    content: '\f053';
+  }
+  .slick-next:before {
+    content: '\f054';
+  }
+
+  .slick-dots li button:before {
+    content: '\f111';
+    @extend .font-icon;
+    color: $color-light;
+  }
+
 }

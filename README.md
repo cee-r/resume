@@ -1,11 +1,17 @@
 # Resume
 
+### Changes
+
+* Used slick for slide
+
+* sadasd
+
 ### Todo
 * SVG for icons
 * Section tracker
-* Commit through Atom
 
 ### Used
 
 * Bootstrap
 * FontAwesome
+* Slick
