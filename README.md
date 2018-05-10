@@ -3,7 +3,7 @@
 ### Todo
 * SVG for icons
 * Section tracker
-* Test git plus
+* Commit through Atom
 
 ### Used
 
