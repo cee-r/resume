@@ -3,12 +3,12 @@
 ### Changes
 
 * Used slick for slide
-
-* sadasd
+* refine
 
 ### Todo
 * SVG for icons
 * Section tracker
+* Responsiveness
 
 ### Used
 
