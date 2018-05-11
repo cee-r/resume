@@ -3,12 +3,14 @@
 ### Changes
 
 * Used slick for slide
-* refine
+* Cleaned html
 
 ### Todo
 * SVG for icons
 * Section tracker
 * Responsiveness
+* Dynamic widths for role breakdown
+* Animations
 
 ### Used
 

@@ -141,21 +141,21 @@ main h2 {
     &.slick-initialized {
       visibility: visible;
     }
-  }
 
-  .ql-description {
-    padding: 0 1.5em;
-    text-align: center;
+    .description {
+      padding: 0 1.5em;
+      text-align: center;
 
-    img {
-      margin:0 auto;
-    }
+      img {
+        margin:0 auto;
+      }
 
-    p {
-      margin: 2em 0;
-      text-align: left;
-      color: $color-light;
-      font-size: 1.2em;
+      p {
+        margin: 2em 0;
+        text-align: left;
+        color: $color-light;
+        font-size: 1.2em;
+      }
     }
   }
 
@@ -184,5 +184,10 @@ main h2 {
     @extend .font-icon;
     color: $color-light;
   }
+}
 
+#experience {
+  .exp-item {
+    display: flex;
+  }
 }
