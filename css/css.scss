@@ -28,14 +28,13 @@ $color-accent: #F2845C;
 
 $color-light: #fff;
 $color-offw: #F5F1D5;
+$color-mid: #666;
 $color-dark: #1a1a1a;
 
 
 // MISC
 
-// Add values to sizing for role breakdown
-$sizes: () !default;
-$sizes: map-merge((
+$w-sizes: (
    0: 0%,
   10: 10%,
   20: 20%,
@@ -50,12 +49,22 @@ $sizes: map-merge((
   90: 90%,
   100: 100%,
   auto: auto
-), $sizes);
+);
+
+@each $size, $width in $w-sizes {
+ .w-#{$size} { width: $width;}
+}
 
 .off-screen {
   position: fixed;
   top: -1000000px;
   left: -1000000px;
+}
+
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .container-fluid {
@@ -207,8 +216,19 @@ main h2 {
 }
 
 #experience {
+  position: relative;
   padding: 2em 0;
 
+  &:before {
+    content: '';
+    display: block;
+    width:10px;
+    height: 90%;
+    background: $color-primary;
+    position: absolute;
+    left: 12%;
+    bottom: 0;
+  }
   h2 {
     color: $color-dark;
   }
@@ -222,6 +242,7 @@ main h2 {
       img {
         border-radius: 50%;
         margin: 0 auto;
+        border: solid 10px $color-primary;
       }
     }
 
@@ -230,10 +251,14 @@ main h2 {
       padding-right: 0;
 
       .company {
-        margin: 2em 0 .5em 0;
+        margin: 1.5em 0 .5em 0;
 
         h3 {
           text-transform: uppercase;
+        }
+
+        .role {
+          font-size: 1.25em;
         }
       }
 
@@ -257,6 +282,24 @@ main h2 {
           &.w-0 {display: none;}
 
 
+        }
+      }
+
+      .details {
+        padding: 3em 0;
+
+        h4 {
+          font-size: 1.1em;
+          text-transform: uppercase;
+        }
+
+        ul {
+          padding-left: 20px;
+        }
+
+        .responsibilities, .environment {
+          width: 50%;
+          float: left;
         }
       }
     }

@@ -10,14 +10,25 @@ $(document).ready(function(){
   });
 
 
-  var arr = [ "task-1", "task-2", "task-3", "task-4", "task-5", "task-6" ];
+  // var tasks = [ "task-1", "task-2", "task-3", "task-4", "task-5", "task-6" ];
+  var tasks = [];
+  //var tasks = [];
 
-  jQuery.each( arr, function( i, val ) {
+  $(".tasks").each(function(i){
+
+     $(this).attr("data-task" , (i + 1))
+
+     tasks.push($(this).attr("class") + "[data-task='" + $(this).data("task") + "']");
+
+  });
+
+  jQuery.each( tasks, function( i, val ) {
 
     var percentage = $( "." + val + " .percentage" ).text();
-    
+
     $( "." + val ).addClass( "w-" + percentage );
 
   });
 
+  console.log(tasks);
 });
