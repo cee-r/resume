@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Resume</title>
+  <title>Title</title>
   <meta name="description" content="Resume">
   <meta name="author" content="Celina">
 
@@ -22,15 +22,14 @@
     <![endif]-->
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#nav" data-offset="0">
 
-
-  <header id="profile">
+  <header id="profile" class="shrink">
     <div class="container">
       <div class="row">
         <div class="name col py-4">
-          <h1>Celina Respall</h1>
-          <span>Web Designer / Developer</span>
+          <h1>Header</h1>
+          <span>Role</span>
         </div>
         <div class="contact col py-4">
           <ul>
@@ -42,12 +41,23 @@
           </ul>
         </div>
       </div>
+
+      <div id="nav" class="row">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="#qualifications">#<span class="off-screen">Qualifications</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">#<span class="off-screen">Experience</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">#<span class="off-screen">Education</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">#<span class="off-screen">Skills</span></a></li>
+        </ul>
+      </div>
+
     </div>
   </header>
+  <!-- PROFILE -->
 
   <main role="main">
     <div id="qualifications">
-      <h2>Qualifications</h2>
+      <h2>Header</h2>
 
       <div class="container">
         <div class="ql-slider row">
@@ -77,12 +87,11 @@
           </div>
         </div>
       </div>
-
     </div>
-
+    <!-- QUALIFICATIONS -->
 
     <div id="experience" class="container">
-      <h2>Experience</h2>
+      <h2>Header</h2>
 
       <div class="exp-item west row">
         <div class="logo col col-3">
@@ -90,14 +99,13 @@
         </div>
         <div class="exp-description col col-9">
           <div class="company">
-            <h3>Institution</h3>
+            <h3>Header</h3>
             <span class="role"> 0000 - 0000 | Web Designer / Developer</span>
           </div>
           <div class="breakdown">
-            <span class="tasks" data-task=""><span class="percentage">25</span>% Task </span>
-            <span class="tasks" data-task=""><span class="percentage">25</span>% Task </span>
-            <span class="tasks" data-task=""><span class="percentage">50</span>% Task </span>
-            <!-- <span class="tasks task-4"><span class="percentage">0</span>% Task </span> -->
+            <span class="tasks">25% Task</span>
+            <span class="tasks">25% Task</span>
+            <span class="tasks">50% Task</span>
           </div>
 
           <div class="details clear">
@@ -126,14 +134,14 @@
         </div>
         <div class="exp-description col col-9">
           <div class="company">
-            <h3>Institution</h3>
+            <h3>Header</h3>
             <span class="role"> 0000 - 0000 | Web Designer / Developer</span>
           </div>
           <div class="breakdown">
-            <span class="tasks" data-task=""><span class="percentage">10</span>% Task </span>
-            <span class="tasks" data-task=""><span class="percentage">10</span>% Task </span>
-            <span class="tasks" data-task=""><span class="percentage">40</span>% Task </span>
-            <span class="tasks" data-task=""><span class="percentage">40</span>% Task </span>
+            <span class="tasks">10% Task</span>
+            <span class="tasks">10% Task</span>
+            <span class="tasks">40% Task</span>
+            <span class="tasks">40% Task</span>
           </div>
 
           <div class="details">
@@ -162,17 +170,17 @@
         </div>
         <div class="exp-description col col-9">
           <div class="company">
-            <h3>Institution</h3>
+            <h3>Header</h3>
             <span class="role"> 0000 - 0000 | Web Designer / Developer</span>
           </div>
           <div class="breakdown">
-            <span class="tasks" data-task=""><span class="percentage">75</span>% Task </span>
-            <span class="tasks" data-task=""><span class="percentage">25</span>% Task </span>
+            <span class="tasks">75% Task</span>
+            <span class="tasks">25% Task</span>
           </div>
 
           <div class="details">
             <div class="responsibilities">
-              <h4>Responsibilities</h4>
+              <h4>Header</h4>
               <ul>
                 <li>Item</li>
                 <li>Item</li>
@@ -182,7 +190,7 @@
             </div>
 
             <div class="environment">
-              <h4>Technical Environment</h4>
+              <h4>Header Environment</h4>
               <p>Lorem ipsum</p>
             </div>
           </div>
@@ -193,10 +201,37 @@
     </div>
     <!-- EXPERIENCE -->
 
+    <div id="education">
+      <h2>Header</h2>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h3>Header</h3>
+            <span class="role">2008-2013 | New Media Studies</span>
+            <span class="degree">Bachelor of Arts</span>
+            <p>Pellentesque semper congue augue nec commodo. Etiam eleifend gravida nunc nec pellentesque. Fusce ex orci, ornare eget dictum ut, dictum vel libero. Mauris blandit leo ante, vitae maximus eros tincidunt ac.</p>
+          </div>
+          <div class="col">
+            <h3>Header</h3>
+            <span class="role">2010-2011 | New Media Studies</span>
+            <p>Pellentesque semper congue augue nec commodo. Etiam eleifend gravida nunc nec pellentesque. Fusce ex orci, ornare eget dictum ut, dictum vel libero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EDUCATION -->
+
+    <div id="skills">
+      <h2>Header</h2>
+    </div>
+
 
 
     <!-- FOOTER -->
     <footer class="container">
+      <div id="back-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
       <p class="float-right"><a href="#">Back to top</a></p>
       <p>© 2017-2018 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
     </footer>
