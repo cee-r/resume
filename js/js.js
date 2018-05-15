@@ -60,4 +60,7 @@ $(document).ready(function(){
   });
 
   //console.log(tasks);
+
+  // Rate
+  
 });

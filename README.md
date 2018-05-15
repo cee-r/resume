@@ -2,6 +2,7 @@
 
 ### Notes
 
+* Main structure built
 * added scroll nav structure and basic set up
 * added sticky/shrink header
 * Added back to top
@@ -15,10 +16,13 @@
 
 ### Todo
 * SVG for icons
-* Section tracker
+~~* Section tracker~~
 * Responsiveness
 * Animations
-* Sticky Header
+~~* Sticky Header~~
+* Rating?
+* Content
+* Background
 
 ### Used
 

@@ -7,15 +7,18 @@ $shrink-fx: .1s ease-in-out;
 .transition { transition: all .3s ease-in-out; }
 
 .container-fluid { padding: 0; }
-
 .container-fluid > .row { margin: 0; }
 
+hr {
+	width: 100%;
+	height: 1px;
+}
 // FEATURES
 
 #back-to-top {
 	text-align: center;
 	line-height: 10px;
-	color: $color-light;
+	color: $color-offw;
 	font-size: 46px;
 	width: 50px;
 	height: 50px;
@@ -31,7 +34,7 @@ $shrink-fx: .1s ease-in-out;
   @extend .transition;
 
 	&:hover {
-		color: $color-primary;
+		color: $color-offw;
 		background-color: $color-accent;
 	}
 }
@@ -140,7 +143,7 @@ main h2 {
 			&:before {
 				content: '';
 				display: block;
-				width: 45%;
+				width: 47%;
 				height: 1px;
 				background: $color-light;
 				position: absolute;
@@ -231,7 +234,13 @@ main h2 {
   .slick-next, .slick-prev {
     &:before {
       @extend .font-icon;
+			@extend .transition;
+			color: $color-offw;
     }
+
+		&:hover:before {
+			color: $color-accent;
+		}
   }
 
   .slick-next {
@@ -251,8 +260,13 @@ main h2 {
   .slick-dots li button:before {
     content: '\f111';
     @extend .font-icon;
-    color: $color-light;
+		@extend .transition;
+    color: $color-offw;
   }
+
+	.slick-dots li button:hover:before {
+		color: $color-accent;
+	}
 }
 
 #experience {
@@ -364,4 +378,40 @@ main h2 {
   h2 {
     color: $color-dark;
   }
+
+	ul {
+		display: block;
+		width: 100%;
+		column-count: 3;
+		column-gap: 2em;
+		column-width: auto;
+		padding: 0;
+		margin: 0 0 3em 0;
+
+		li {
+			display: block;
+			@extend .clear;
+
+			.stars {
+				display: inline-block;
+				float: right;
+				visibility: hidden; // hide for now
+			}
+		}
+	}
+}
+
+
+footer {
+	background: $color-primary;
+	color: $color-light;
+	padding: .3em 0 !important;
+
+	p {
+		margin: .5em auto;
+		text-align: center;
+		font-size: .7em;
+		text-transform: uppercase;
+		color: $color-offw;
+	}
 }

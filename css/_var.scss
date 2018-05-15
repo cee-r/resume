@@ -58,7 +58,7 @@ $w-sizes: (
 );
 
 @each $size, $width in $w-sizes {
- .w-#{$size} { width: $width;}
+ .w-#{$size} { width: $width !important;}
 }
 
 .off-screen {
