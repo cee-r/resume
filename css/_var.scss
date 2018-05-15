@@ -79,3 +79,13 @@ $w-sizes: (
 	top: 0;
 	z-index: $zindex-sticky;
 }
+
+
+// MIXINS
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
