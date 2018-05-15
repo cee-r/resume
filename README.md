@@ -16,10 +16,10 @@
 
 ### Todo
 * SVG for icons
-~~* Section tracker~~
+* ~~Section tracker~~
 * Responsiveness
 * Animations
-~~* Sticky Header~~
+* ~~Sticky Header~~
 * Rating?
 * Content
 * Background
