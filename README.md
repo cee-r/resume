@@ -25,6 +25,7 @@
 * Rating?
 * Content - Add/Review/Revise
 * Background
+* favicon
 
 
 ### Used
