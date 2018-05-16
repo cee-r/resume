@@ -17,8 +17,8 @@
 ### Todo
 * SVG for icons
 * ~~Section tracker~~
-* Responsiveness
-* Animations
+* ~~Responsiveness~~
+* ~~Animations~~
 * ~~Sticky Header~~
 * Rating?
 * Content
