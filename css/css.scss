@@ -4,7 +4,7 @@
 
 // MISC
 
-html  {
+html, main  {
 
     width: 100%;
     height: 100%;
@@ -360,7 +360,7 @@ main h2 {
     content: '';
     display: block;
     width:10px;
-    height: 95%; 
+    height: 95%;
     background: $color-primary;
     position: absolute;
     left: 12%;

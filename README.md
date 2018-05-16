@@ -19,6 +19,7 @@
 * SVG for icons
 * ~~Section tracker~~
 * ~~Responsiveness~~
+** Breakdown bar (Galaxy S5 @ 360px, iphone x @ 375px)
 * ~~Animations~~
 * ~~Sticky Header~~
 * Rating?
