@@ -2,6 +2,7 @@
 
 ### Notes
 
+* added some content
 * Main structure built
 * added scroll nav structure and basic set up
 * added sticky/shrink header
@@ -21,8 +22,9 @@
 * ~~Animations~~
 * ~~Sticky Header~~
 * Rating?
-* Content
+* Content - Add/Review/Revise
 * Background
+
 
 ### Used
 
