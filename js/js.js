@@ -36,6 +36,26 @@ $(document).ready(function(){
     autoplaySpeed: 2500,
     arrows: true,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+        }
+      }
+    ]
   });
 
   // Breakdown
@@ -62,5 +82,5 @@ $(document).ready(function(){
   //console.log(tasks);
 
   // Rate
-  
+
 });

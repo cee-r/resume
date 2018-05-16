@@ -25,6 +25,15 @@ $color-offw: #F5F1D5;
 $color-mid: #666;
 $color-dark: #1a1a1a;
 
+// BREAKPOINTS
+
+$break-1200: "screen and (max-width: 1200px)";
+$break-1000: "screen and (max-width: 1000px)";
+$break-768: "screen and (max-width: 768px)";
+$break-576: "screen and (max-width: 576px)";
+$break-450: "screen and (max-width: 450px)";
+
+
 // VAR
 
 $zindex-backdrop:          -2000;

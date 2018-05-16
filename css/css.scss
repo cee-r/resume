@@ -3,11 +3,22 @@
 
 
 // MISC
+
+html  {
+
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+}
+
 $shrink-fx: .1s ease-in-out;
 .transition { transition: all .3s ease-in-out; }
 
 .container-fluid { padding: 0; }
-.container-fluid > .row { margin: 0; }
+//.container-fluid > .row { margin: 0; }
 
 hr {
 	width: 100%;
@@ -62,17 +73,44 @@ main h2 {
   .container {
     transition: font-size $shrink-fx;
 
-		.row {position: relative;}
+		@media #{$break-768} {
+			font-size: 14px;
+		}
+
+		.row {
+			position: relative;
+
+			@media #{$break-450} {
+				display: block;
+			}
+		}
 
     .py-4 {
       transition: padding $shrink-fx;
+
+			@media #{$break-768} {
+				padding-top: 1em !important;
+				padding-bottom: 1em !important;
+			}
     }
   }
 
   .name {
     color: #fff;
 
-    h1 { margin: 0;}
+		@media #{$break-450} {
+			text-align: center;
+
+			&.py-4 {
+				padding-bottom: 0 !important;
+			}
+		}
+
+    h1 { margin: 0;
+			@media #{$break-768} {
+				font-size: 1.5em;
+			}
+		}
 
     span {
       color: $color-offw;
@@ -80,11 +118,21 @@ main h2 {
   }
 
   .contact {
+
+		@media #{$break-450} {
+			padding-top: 0 !important;
+		}
+
     ul {
       padding-left: 0;
 			margin-bottom: 0;
       list-style: none;
       text-align: right;
+
+			@media #{$break-450} {
+				text-align: center;
+			}
+
 
       li {
         display: inline-block;
@@ -100,6 +148,11 @@ main h2 {
           padding: .5em;
           @extend .transition;
 
+					@media #{$break-768} {
+						height: 36px;
+						width: 36px;
+					}
+
           &:hover {
             background: $color-accent;
             text-decoration: none;
@@ -109,6 +162,10 @@ main h2 {
             @extend .font-icon;
             color: $color-primary;
             font-size: 1.5em;
+
+						@media #{$break-768} {
+							font-size: 1em;
+						}
           }
 
           &.phone:before {
@@ -133,13 +190,19 @@ main h2 {
   }
 
   #nav {
+		position: absolute;
+		left: 10px;
+		@media #{$break-576} {
+			display: none;
+		}
+
     .nav {
-      margin: 2.5em auto;
+      margin: 1.75em auto;
 			position: relative;
 			display: block;
 			text-align: center;
 			transition: margin $shrink-fx;
-
+			/*
 			&:before {
 				content: '';
 				display: block;
@@ -152,15 +215,22 @@ main h2 {
 				@include transform(translate(-50%, 0));
 				z-index: -1;
 			}
+			*/
+
+			@media #{$break-768} {
+				margin: .7em auto;
+			}
 
 			.nav-item {
-				margin: 0 .5em;
-				display: inline-block;
+				margin: .5em 0;
+				display: block;
 
 				.nav-link {
 					padding: .25em;
 					background: $color-offw;
 					border-radius: 50%;
+					width: 5px;
+					height: 5px;
 					@extend .transition;
 
 					&:hover, &.active {
@@ -177,7 +247,16 @@ main h2 {
 
       .py-4 {
         padding-top: 1em !important;
-        padding-bottom: .5em !important;
+        padding-bottom: 1em !important;
+
+				@media #{$break-450} {
+					&.name {
+						padding-bottom: 0 !important;
+					}
+					&.contact {
+						padding-top: 1em !important;
+					}
+				}
       }
 
       h1 {font-size: 1.5em;}
@@ -192,8 +271,12 @@ main h2 {
       }
     }
 
-		#nav .nav {
-			margin: 1.5em auto;
+		#nav {
+			font-size: 14px;
+
+			.nav {
+				margin: .7em auto;
+			}
 		}
   }
 }
@@ -277,11 +360,15 @@ main h2 {
     content: '';
     display: block;
     width:10px;
-    height: 80%;
+    height: 85%;
     background: $color-primary;
     position: absolute;
     left: 12%;
     bottom: 0;
+
+		@media #{$break-768} {
+			display: none;
+		}
   }
 
   h2 {
@@ -291,13 +378,33 @@ main h2 {
   .exp-item {
     margin: 3em 0;
 
+		@media #{$break-768} {
+			display: block;
+			flex: none;
+
+			.col {
+				float: none;
+			}
+		}
+
     .logo {
       text-align: center;
+
+			@media #{$break-768} {
+				display: block;
+				width: 100%;
+				max-width: none;
+			}
 
       img {
         border-radius: 50%;
         margin: 0 auto;
         border: solid 10px $color-primary;
+				@extend .transition;
+
+				@media #{$break-1000} {
+					max-height: 150px;
+				}
       }
     }
 
@@ -305,8 +412,21 @@ main h2 {
       margin: 1.5em 0;
       padding-right: 0;
 
+			@media #{$break-768} {
+				display: block;
+				width: 100%;
+				max-width: none;
+			}
+
+			@media #{$break-576} {
+				padding: 15px;
+			}
       .company {
         margin: 1.5em 0 .5em 0;
+
+				@media #{$break-1000} {
+					margin-top: .75em;
+				}
 
         h3 {
           text-transform: uppercase;
@@ -357,6 +477,11 @@ main h2 {
         .responsibilities, .environment {
           width: 50%;
           float: left;
+
+					@media #{$break-576} {
+						float: none;
+						width: 100%;
+					}
         }
       }
     }
@@ -369,11 +494,23 @@ main h2 {
   padding: 5em 0;
   color: $color-light;
 
+	.row {
+		@media #{$break-576} {
+			display: block;
+		}
+	}
+
 }
 
 #skills {
 	padding: 5em 0;
   background: $color-tertiary;
+
+	.row {
+		@media #{$break-576} {
+			margin: 0;
+		}
+	}
 
   h2 {
     color: $color-dark;
@@ -387,6 +524,14 @@ main h2 {
 		column-width: auto;
 		padding: 0;
 		margin: 0 0 3em 0;
+
+		@media #{$break-576} {
+			column-count: 2;
+		}
+
+		@media #{$break-450} {
+			column-count: 1;
+		}
 
 		li {
 			display: block;
