@@ -1,57 +1,54 @@
 @import 'normalize.css';
 @import '_var.scss';
-
-
 // MISC
+html,
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+$shrink-fx: 0.1s ease-in-out;
 
-html, main  {
-
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-
+.transition {
+  transition: all 0.3s ease-in-out;
 }
 
-$shrink-fx: .1s ease-in-out;
-.transition { transition: all .3s ease-in-out; }
-
-.container-fluid { padding: 0; }
+.container-fluid {
+  padding: 0;
+}
 //.container-fluid > .row { margin: 0; }
 
 hr {
-	width: 100%;
-	height: 1px;
+  width: 100%;
+  height: 1px;
 }
 // FEATURES
-
 #back-to-top {
-	text-align: center;
-	line-height: 10px;
-	color: $color-offw;
-	font-size: 46px;
-	width: 50px;
-	height: 50px;
+  text-align: center;
+  line-height: 10px;
+  color: $color-offw;
+  font-size: 46px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  padding: 0px 10px;
+  padding: 0 10px;
   position: fixed;
   bottom: 10px;
   right: 10px;
   cursor: pointer;
   display: none;
-	z-index: $zindex-sticky;
+  z-index: $zindex-sticky;
   background-color: $color-primary;
   @extend .transition;
 
-	&:hover {
-		color: $color-offw;
-		background-color: $color-accent;
-	}
+  &:hover {
+    color: $color-offw;
+    background-color: $color-accent;
+  }
 }
-
 // DEFAULTS
-
 body {
   font-family: $font-base;
   font-size: 16px;
@@ -65,52 +62,47 @@ main h2 {
   margin-bottom: 2em;
 }
 
-
-
 #profile {
   background: $color-primary;
 
   .container {
     transition: font-size $shrink-fx;
+    @media #{$break-768} {
+      font-size: 14px;
+    }
 
-		@media #{$break-768} {
-			font-size: 14px;
-		}
-
-		.row {
-			position: relative;
-
-			@media #{$break-450} {
-				display: block;
-			}
-		}
+    .row {
+      position: relative;
+      @media #{$break-450} {
+        display: block;
+      }
+    }
 
     .py-4 {
       transition: padding $shrink-fx;
-
-			@media #{$break-768} {
-				padding-top: 1em !important;
-				padding-bottom: 1em !important;
-			}
+      @media #{$break-768} {
+        padding-top: 1em !important;
+        padding-bottom: 1em !important;
+      }
     }
   }
 
   .name {
     color: #fff;
+    @media #{$break-450} {
+      text-align: center;
 
-		@media #{$break-450} {
-			text-align: center;
+      &.py-4 {
+        padding-bottom: 0 !important;
+      }
+    }
 
-			&.py-4 {
-				padding-bottom: 0 !important;
-			}
-		}
-
-    h1 { margin: 0;
-			@media #{$break-768} {
-				font-size: 1.5em;
-			}
-		}
+    h1 {
+      margin: 0;
+      @media #{$break-768} {
+        font-size: 1.5em;
+      }
+    }
 
     span {
       color: $color-offw;
@@ -118,25 +110,22 @@ main h2 {
   }
 
   .contact {
-
-		@media #{$break-450} {
-			padding-top: 0 !important;
-		}
+    @media #{$break-450} {
+      padding-top: 0 !important;
+    }
 
     ul {
       padding-left: 0;
-			margin-bottom: 0;
+      margin-bottom: 0;
       list-style: none;
       text-align: right;
-
-			@media #{$break-450} {
-				text-align: center;
-			}
-
+      @media #{$break-450} {
+        text-align: center;
+      }
 
       li {
         display: inline-block;
-        margin-right: .5em;
+        margin-right: 0.5em;
 
         a {
           display: block;
@@ -145,13 +134,12 @@ main h2 {
           background: $color-offw;
           border-radius: 50%;
           text-align: center;
-          padding: .5em;
+          padding: 0.5em;
           @extend .transition;
-
-					@media #{$break-768} {
-						height: 36px;
-						width: 36px;
-					}
+          @media #{$break-768} {
+            height: 36px;
+            width: 36px;
+          }
 
           &:hover {
             background: $color-accent;
@@ -162,27 +150,26 @@ main h2 {
             @extend .font-icon;
             color: $color-primary;
             font-size: 1.5em;
-
-						@media #{$break-768} {
-							font-size: 1em;
-						}
+            @media #{$break-768} {
+              font-size: 1em;
+            }
           }
 
           &.phone:before {
-            content: '\f3cd'
+            content: '\f3cd';
           }
 
           &.email:before {
-            content: '\f0e0'
+            content: '\f0e0';
           }
 
           &.linkedin:before {
             @extend .font-icon-brand;
-            content: '\f08c'
+            content: '\f08c';
           }
 
           &.pdf:before {
-            content: '\f1c1'
+            content: '\f1c1';
           }
         }
       }
@@ -190,19 +177,19 @@ main h2 {
   }
 
   #nav {
-		position: absolute;
-		left: 10px;
-		@media #{$break-576} {
-			display: none;
-		}
+    position: absolute;
+    left: 10px;
+    @media #{$break-576} {
+      display: none;
+    }
 
     .nav {
       margin: 1.75em auto;
-			position: relative;
-			display: block;
-			text-align: center;
-			transition: margin $shrink-fx;
-			/*
+      position: relative;
+      display: block;
+      text-align: center;
+      transition: margin $shrink-fx;
+      /*
 			&:before {
 				content: '';
 				display: block;
@@ -216,28 +203,28 @@ main h2 {
 				z-index: -1;
 			}
 			*/
+      @media #{$break-768} {
+        margin: 0.7em auto;
+      }
 
-			@media #{$break-768} {
-				margin: .7em auto;
-			}
+      .nav-item {
+        margin: 0.5em 0;
+        display: block;
 
-			.nav-item {
-				margin: .5em 0;
-				display: block;
+        .nav-link {
+          padding: 5px;
+          background: $color-offw;
+          border-radius: 50%;
+          width: 5px;
+          height: 5px;
+          @extend .transition;
 
-				.nav-link {
-					padding: .25em;
-					background: $color-offw;
-					border-radius: 50%;
-					width: 5px;
-					height: 5px;
-					@extend .transition;
-
-					&:hover, &.active {
-						background: $color-accent;
-					}
-				}
-			}
+          &.active,
+          &:hover {
+            background: $color-accent;
+          }
+        }
+      }
     }
   }
 
@@ -248,18 +235,20 @@ main h2 {
       .py-4 {
         padding-top: 1em !important;
         padding-bottom: 1em !important;
+        @media #{$break-450} {
+          &.name {
+            padding-bottom: 0 !important;
+          }
 
-				@media #{$break-450} {
-					&.name {
-						padding-bottom: 0 !important;
-					}
-					&.contact {
-						padding-top: 1em !important;
-					}
-				}
+          &.contact {
+            padding-top: 1em !important;
+          }
+        }
       }
 
-      h1 {font-size: 1.5em;}
+      h1 {
+        font-size: 1.5em;
+      }
 
       .contact ul li a {
         height: 36px;
@@ -271,16 +260,19 @@ main h2 {
       }
     }
 
-		#nav {
-			font-size: 14px;
+    #nav {
+      font-size: 14px;
 
-			.nav {
-				margin: .7em auto;
-			}
-		}
+      .nav {
+        margin: 0.7em auto;
+
+        .nav-item {
+          margin: 5px 0;
+        }
+      }
+    }
   }
 }
-
 
 #qualifications {
   width: 100%;
@@ -289,9 +281,13 @@ main h2 {
   min-height: 450px;
   box-sizing: border-box;
 
+  object.icon {
+    max-height: 190px;
+  }
+  
   .ql-slider {
     visibility: hidden;
-    transition: visibility .5s ease-in-out;
+    transition: visibility 0.5s ease-in-out;
 
     &.slick-initialized {
       visibility: visible;
@@ -302,7 +298,7 @@ main h2 {
       text-align: center;
 
       img {
-        margin:0 auto;
+        margin: 0 auto;
       }
 
       p {
@@ -314,16 +310,17 @@ main h2 {
     }
   }
 
-  .slick-next, .slick-prev {
+  .slick-next,
+  .slick-prev {
     &:before {
       @extend .font-icon;
-			@extend .transition;
-			color: $color-offw;
+      @extend .transition;
+      color: $color-offw;
     }
 
-		&:hover:before {
-			color: $color-accent;
-		}
+    &:hover:before {
+      color: $color-accent;
+    }
   }
 
   .slick-next {
@@ -333,9 +330,11 @@ main h2 {
   .slick-prev {
     left: -5%;
   }
+
   .slick-prev:before {
     content: '\f053';
   }
+
   .slick-next:before {
     content: '\f054';
   }
@@ -343,13 +342,13 @@ main h2 {
   .slick-dots li button:before {
     content: '\f111';
     @extend .font-icon;
-		@extend .transition;
+    @extend .transition;
     color: $color-offw;
   }
 
-	.slick-dots li button:hover:before {
-		color: $color-accent;
-	}
+  .slick-dots li button:hover:before {
+    color: $color-accent;
+  }
 }
 
 #experience {
@@ -359,16 +358,15 @@ main h2 {
   &:before {
     content: '';
     display: block;
-    width:10px;
+    width: 10px;
     height: 95%;
     background: $color-primary;
     position: absolute;
     left: 12%;
     bottom: 0;
-
-		@media #{$break-768} {
-			display: none;
-		}
+    @media #{$break-768} {
+      display: none;
+    }
   }
 
   h2 {
@@ -377,56 +375,52 @@ main h2 {
 
   .exp-item {
     margin: 3em 0;
+    @media #{$break-768} {
+      display: block;
+      flex: none;
 
-		@media #{$break-768} {
-			display: block;
-			flex: none;
-
-			.col {
-				float: none;
-			}
-		}
+      .col {
+        float: none;
+      }
+    }
 
     .logo {
       text-align: center;
-
-			@media #{$break-768} {
-				display: block;
-				width: 100%;
-				max-width: none;
-			}
+      @media #{$break-768} {
+        display: block;
+        width: 100%;
+        max-width: none;
+      }
 
       img {
         border-radius: 50%;
         margin: 0 auto;
         border: solid 10px $color-primary;
-				@extend .transition;
-
-				@media #{$break-1000} {
-					max-height: 150px;
-				}
+        max-height: 190px;
+        @extend .transition;
+        @media #{$break-1000} {
+          max-height: 150px;
+        }
       }
     }
 
     .exp-description {
       margin: 1.5em 0;
       padding-right: 0;
+      @media #{$break-768} {
+        display: block;
+        width: 100%;
+        max-width: none;
+      }
+      @media #{$break-576} {
+        padding: 15px;
+      }
 
-			@media #{$break-768} {
-				display: block;
-				width: 100%;
-				max-width: none;
-			}
-
-			@media #{$break-576} {
-				padding: 15px;
-			}
       .company {
-        margin: 1.5em 0 .5em 0;
-
-				@media #{$break-1000} {
-					margin-top: .75em;
-				}
+        margin: 1.5em 0 0.5em;
+        @media #{$break-1000} {
+          margin-top: 0.75em;
+        }
 
         h3 {
           text-transform: uppercase;
@@ -439,26 +433,29 @@ main h2 {
 
       .breakdown {
         background: $color-tertiary;
-        border-radius: .25em;
+        border-radius: 0.25em;
         display: table;
-        width:100%;
+        width: 100%;
         margin-bottom: 2em;
 
         .tasks {
           display: table-cell;
-          padding: .25em 1em;
+          padding: 0.25em 1em;
           border-right: 1px solid $color-primary;
           border-right-color: rgba($color-primary, .15);
           color: $color-primary;
-          font-size: .7em;
+          font-size: 0.7em;
           text-transform: uppercase;
           transition: width 3s ease-in-out;
           width: auto;
 
-          &:last-child { border:0;}
-          &.w-0 {display: none;}
+          &:last-child {
+            border: 0;
+          }
 
-
+          &.w-0 {
+            display: none;
+          }
         }
       }
 
@@ -473,7 +470,6 @@ main h2 {
         ul {
           padding-left: 20px;
         }
-
         /*
         .responsibilities, .environment {
           width: 50%;
@@ -495,69 +491,70 @@ main h2 {
   padding: 5em 0;
   color: $color-light;
 
-	.row {
-		@media #{$break-576} {
-			display: block;
-		}
-	}
+  .row {
+    @media #{$break-576} {
+      display: block;
+    }
+  }
 
+  .role {
+    display: block;
+    font-weight: bold;
+  }
 }
 
 #skills {
-	padding: 5em 0;
+  padding: 5em 0;
   background: $color-tertiary;
 
-	.row {
-		@media #{$break-576} {
-			margin: 0;
-		}
-	}
+  .row {
+    @media #{$break-576} {
+      margin: 0;
+    }
+  }
 
   h2 {
     color: $color-dark;
   }
 
-	ul {
-		display: block;
-		width: 100%;
-		column-count: 3;
-		column-gap: 2em;
-		column-width: auto;
-		padding: 0;
-		margin: 0 0 3em 0;
+  ul {
+    display: block;
+    width: 100%;
+    column-count: 3;
+    column-gap: 2em;
+    column-width: auto;
+    padding: 0;
+    margin: 0 0 3em;
+    @media #{$break-576} {
+      column-count: 2;
+    }
+    @media #{$break-450} {
+      column-count: 1;
+    }
 
-		@media #{$break-576} {
-			column-count: 2;
-		}
+    li {
+      display: block;
+      @extend .clear;
 
-		@media #{$break-450} {
-			column-count: 1;
-		}
-
-		li {
-			display: block;
-			@extend .clear;
-
-			.stars {
-				display: inline-block;
-				float: right;
-				visibility: hidden; // hide for now
-			}
-		}
-	}
+      .stars {
+        display: inline-block;
+        float: right;
+        visibility: hidden; // hide for now
+      }
+    }
+  }
 }
 
-
 footer {
-	background: $color-primary;
-	color: $color-light;
-	padding: .3em 0 !important;
+  background: $color-primary;
+  color: $color-light;
+  padding: 0.3em 0 !important;
 
-	p {
-		margin: .5em auto;
-		text-align: center;
-		font-size: .7em;
-		text-transform: uppercase;
-		color: $color-offw;
-	}
+  p {
+    margin: 0.5em auto;
+    text-align: center;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    color: $color-offw;
+  }
 }
