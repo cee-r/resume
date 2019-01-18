@@ -583,6 +583,8 @@ footer {
 }
 
 @media print {
+
+  #profile {}
  #qualifications {display: none;}
  @page {margin:0px auto;}
 }
