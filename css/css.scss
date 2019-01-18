@@ -9,7 +9,8 @@ main {
   padding: 0;
   overflow-x: hidden;
 }
-$shrink-fx: 0.1s ease-in-out;
+
+$shrink-fx: 0.2s ease-in-out;
 
 .transition {
   transition: all 0.3s ease-in-out;
@@ -53,6 +54,11 @@ body {
   font-family: $font-base;
   font-size: 16px;
   position: relative;
+  background: $color-secondary;
+}
+
+main {
+  background: $color-light;
 }
 
 main h2 {
@@ -79,7 +85,7 @@ main h2 {
     }
 
     .py-4 {
-      transition: padding $shrink-fx;
+      //transition: padding $shrink-fx;
       @media #{$break-768} {
         padding-top: 1em !important;
         padding-bottom: 1em !important;
@@ -89,6 +95,8 @@ main h2 {
 
   .name {
     color: #fff;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
     @media #{$break-450} {
       text-align: center;
 
@@ -110,6 +118,9 @@ main h2 {
   }
 
   .contact {
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+
     @media #{$break-450} {
       padding-top: 0 !important;
     }
@@ -119,6 +130,8 @@ main h2 {
       margin-bottom: 0;
       list-style: none;
       text-align: right;
+      margin: .5em 0;
+
       @media #{$break-450} {
         text-align: center;
       }
@@ -135,7 +148,8 @@ main h2 {
           border-radius: 50%;
           text-align: center;
           padding: 0.5em;
-          @extend .transition;
+          //@extend .transition;
+          transition: background 0.3s ease-in-out;
           @media #{$break-768} {
             height: 36px;
             width: 36px;
@@ -171,6 +185,14 @@ main h2 {
           &.pdf:before {
             content: '\f1c1';
           }
+
+          &.site:before {
+            content: '\f0c1';
+          }
+
+          &.print:before {
+            content: '\f02f';
+          }
         }
       }
     }
@@ -184,11 +206,11 @@ main h2 {
     }
 
     .nav {
-      margin: 1.75em auto;
+      margin: 1.25em auto;
       position: relative;
       display: block;
       text-align: center;
-      transition: margin $shrink-fx;
+      //transition: margin $shrink-fx;
       /*
 			&:before {
 				content: '';
@@ -284,7 +306,7 @@ main h2 {
   object.icon {
     max-height: 190px;
   }
-  
+
   .ql-slider {
     visibility: hidden;
     transition: visibility 0.5s ease-in-out;
@@ -397,6 +419,7 @@ main h2 {
         margin: 0 auto;
         border: solid 10px $color-primary;
         max-height: 190px;
+        background:$color-primary;
         @extend .transition;
         @media #{$break-1000} {
           max-height: 150px;
@@ -557,4 +580,9 @@ footer {
     text-transform: uppercase;
     color: $color-offw;
   }
+}
+
+@media print {
+ #qualifications {display: none;}
+ @page {margin:0px auto;}
 }
