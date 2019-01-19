@@ -150,6 +150,7 @@ main h2 {
           padding: 0.5em;
           //@extend .transition;
           transition: background 0.3s ease-in-out;
+          cursor: pointer;
           @media #{$break-768} {
             height: 36px;
             width: 36px;
@@ -584,7 +585,141 @@ footer {
 
 @media print {
 
-  #profile {}
- #qualifications {display: none;}
- @page {margin:0px auto;}
+  #profile {
+    border-bottom: 2px solid #333;
+    margin-bottom: 1em;
+
+    .py-4 {
+      //flex-basis: 100%;
+
+      &.name {
+        padding-bottom: 0 !important;
+        color: #333;
+
+        span {
+          color: #333;
+        }
+      }
+
+      &.contact {
+        padding-top: 0 !important;
+      }
+    }
+
+    .contact {
+      ul {
+        text-align: left;
+
+        li {
+          display: block;
+
+          a {
+            display: block;
+            height: auto !important;
+            width: auto !important;
+            background: none;
+            border-radius: 0;
+            text-align: left;
+            padding: 0;
+
+            &.print {
+              display: none;
+            }
+            &:before {
+              display: none;
+            }
+
+            .off-screen {
+              position: relative;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #qualifications {display: none;}
+
+  #experience, #education {
+    padding: 0 1em;
+    max-width: 100% !important;
+
+    h2 {
+      //text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  #experience {
+    &:before {
+      display: none;
+    }
+    .exp-item {
+      margin: 1em 0;
+      .logo {
+        text-align: left;
+        max-width: 12% !important;
+
+        img  {
+          max-height: 100px;
+          border-width: 5px;
+        }
+      }
+
+      .exp-description {
+        margin: 0;
+        max-width: 88% !important;
+        flex: 0 0 88% !important;
+
+
+        .company {
+          margin: 0;
+
+          h3 {
+            margin: 0;
+          }
+        }
+
+        .breakdown {
+          margin-bottom: 0;
+
+          .tasks {
+            display: inline !important;
+            padding: 0.25em 1em;
+
+            &:first-child {
+              padding-left: 0;
+            }
+          }
+        }
+
+        .details {
+          padding: 1em 0;
+        }
+      }
+    }
+  }
+
+  .shrink, .shrink-on {
+    position:unset;
+  }
+
+  main {
+    margin-top: 0 !important;
+  }
+
+  #education {
+    //margin-top: 200px;
+    color: #333;
+    border: 0;
+
+    h2 {
+      margin: 1em 0;
+      color: #333;
+    }
+  }
+
+  //@page {margin:0px auto}
 }
