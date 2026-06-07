@@ -20,7 +20,7 @@ $primary: #1A2340;
 $secondary: #243054;
 $tertiary: #D4A574;
 $accent: #E8C77A;
-$accent-2: #ecd090;
+$accent-2: #f2daa2;
 $light: #F4EAD5;
 $muted: #A9B2C3;
 
@@ -59,6 +59,9 @@ $heading-ko: $accent;
 .accent-3 {
   background-color: $accent-2;
 }
+.accent-4 {
+  background-color: $light;
+}
 .text-accent-1 {
   color: $tertiary;
 }
@@ -67,6 +70,9 @@ $heading-ko: $accent;
 }
 .text-accent-3 {
   color: $accent-2;
+}
+.text-accent-4 {
+  color: $light;
 }
 
 body {
@@ -189,7 +195,7 @@ a {
       content: '';
       display: block;
       width: 1px;
-      height: 95%;
+      height: 100%;
       background: $muted;
       position: absolute;
       right: 7%;
