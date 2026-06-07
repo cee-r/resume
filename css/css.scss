@@ -1,2 +1,293 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// Font
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Palette
+$primary: #1A2340;
+$secondary: #243054;
+$tertiary: #D4A574;
+$accent: #E8C77A;
+$accent-2: #ecd090;
+$light: #F4EAD5;
+$muted: #A9B2C3;
+
+// Neutrals
+$white: #ffffff;
+$bright-snow: #f8f9faff;
+$platinum: #e9ecefff;
+$alabaster-grey: #dee2e6ff;
+$pale-slate: #ced4daff;
+$pale-slate-2: #adb5bdff;
+$slate-grey: #6c757dff;
+$iron-grey: #495057ff;
+$gunmetal: #343a40ff;
+$carbon-black: #212529ff;
+
+// Alias
+$font-base: "Inter", sans-serif;
+$font-heading: "Cormorant Garamond", serif;
+$surface-dark: $secondary;
+$surface-offwhite: $bright-snow;
+$surface-light: $white;
+$text: $secondary;
+$text-ko: $light;
+$heading: $secondary;
+$heading-ko: $accent;
+
+
+// Utilities
+
+.accent-1 {
+  background-color: $tertiary;
+}
+.accent-2 {
+  background-color: $accent;
+}
+.accent-3 {
+  background-color: $accent-2;
+}
+.text-accent-1 {
+  color: $tertiary;
+}
+.text-accent-2 {
+  color: $accent;
+}
+.text-accent-3 {
+  color: $accent-2;
+}
+
+body {
+  font-family: $font-base;
+  background: $surface-offwhite;
+  color: $text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  color: $heading;
+}
+
+
+hr {
+  color: $accent-2;
+}
+
+a {
+  color: $accent;
+  text-decoration:underline;
+  text-decoration-color: $accent !important;
+}
+
+.panel-main {
+
+  section {
+    background: $surface-light;
+
+    &.profile {
+      background: $surface-offwhite;
+
+      .tag {
+        // background: $surface-dark;
+        a {
+          color: $secondary;
+           text-decoration:underline;
+            text-decoration-color: rgba($secondary, 0.25) !important;
+
+            &:hover {
+              opacity: 0.8;
+              text-decoration:none
+            }
+        }
+      }
+    }
+
+    .roles em {
+      color: $slate-grey;
+    }
+
+    ul li {
+      margin-bottom: .25rem;}
+  }
+}
+
+.panel-side {
+  background-color: $surface-dark;
+  color: $text-ko;
+  padding: 0 2rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $heading-ko;
+  }
+
+  section {
+    background: $surface-dark;
+  }
+
+  section.profile {
+     .tag {
+        // background: $surface-dark;
+        a {
+          color: $accent;
+           text-decoration:underline;
+            text-decoration-color: rgba($accent, 0.25) !important;
+
+            &:hover {
+              // text-decoration-color: $accent !important;
+              opacity: 0.8;
+              text-decoration:none
+            }
+        }
+      }
+  }
+
+}
+
+
+.logo {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  img {
+    border-radius: 50%;
+    margin: 0 auto;
+    border: solid 4px $muted;
+    max-height: 100px;
+    background: $muted;
+  }
+}
+
+#experience {
+  .wrapper {
+    position: relative;
+
+   @media (min-width: 1400px) {
+       &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 95%;
+      background: $muted;
+      position: absolute;
+      right: 7%;
+      bottom: 0;
+      z-index: 0;
+    }
+    }
+  }
+
+  .summary {
+    border-color: $surface-dark !important;
+  }
+
+  .breakdown {
+    background: $surface-dark;
+    color: $text-ko;
+    position: relative;
+
+    .role-breakdown { 
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+
+      div {
+        height: 1rem;
+      }
+    }
+  }
+}
+
+.breakdown .badge,
+.competencies .badge {
+      background: transparent;
+      border-color: $text-ko !important;
+      color: $text-ko;
+      font-weight: 400;
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
+
+.profile-summary {
+  background: $surface-dark !important;
+  color: $text-ko;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $heading-ko;
+  }
+}
+
+
+.accordion-item {
+  background: transparent;
+  border: 0;
+}
+.accordion-button {
+  background: transparent;
+  border: solid 1px $accent;
+  color: $accent;
+  font-weight: 400;
+  // font-size: 1rem;
+  font-family: $font-base;
+  // margin-bottom: .5rem;
+
+  h3 {
+    color: $accent;
+  }
+  &::after {
+    filter: invert(75%);
+  }
+
+  &.collapsed {
+    background: transparent;
+    border-color: $accent !important;
+    color: $accent;
+  }
+
+  &:not(.collapsed) {
+  background: $accent !important;
+  border-color: $accent !important;
+  color: $text;
+
+    &::after {
+      filter: unset;
+    }
+  }
+}
+
+.accordion-body {
+  color: $text-ko;
+}
+.accordion-collapse {
+  border: solid 1px $accent;
+  border-top: 0;
+}
 
