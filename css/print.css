@@ -1,0 +1,77 @@
+@media print {
+  @page {
+    /* Set a uniform 1-inch margin on all four sides */
+    margin: 0.25in; 
+  }
+   body {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); /* Support for older WebKit browsers */
+  }
+}
+
+
+section, .summary, .summary p, .breakdown, .profile {
+    margin: 0 !important;
+    padding: 16px !important;
+}
+
+body .badge {
+    color: #333 !important;
+    border-color: #333 !important;
+}
+
+#flush-collapseThree, #flush-collapseOne, #flush-collapseTwo {
+    display: block !important;
+}
+
+.wrapper > .container.g-0 {
+        width: 100% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.mb-5, .mt-4, .my-3, .my-5 {
+    margin: 16px !important;
+}
+
+.p-5, .pt-5, .pb-3, .px-5, .pe-xxl-5 {
+ padding: 16px !important;
+}
+
+.shadow-sm {
+        box-shadow: none !important;
+}
+
+.summary {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+}
+
+.col-12.col.col-xxl-10, .summary {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0!important;
+}
+
+
+.d-logo.d-none.d-xxl-flex.col-12.col-xxl-2-flex {
+    display: none !important;
+}
+.container {
+    margin: 0 !important;
+}
+
+.wrapper::after, .logo { display: none !important;}
+
+body, a, h1, h2, h3, h4, h5, h6, span, p, section, .accordion-button, .text-accent-1, .text-accent-2, .text-accent-3, .text-accent-4 {
+    color: #333 !important;
+
+}
+
+.col-12.col-xxl-10 pe-xxl-5 {
+    width: 100% !important;
+    padding: 0 !important;
+}
